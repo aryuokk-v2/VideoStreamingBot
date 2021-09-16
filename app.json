@@ -1,0 +1,66 @@
+{
+    "name": "PrinceXvideo_Bot",
+    "description": "A simple telegram bot to stream videos on vc, powered by pytgcalls and pyrogram",
+    "logo": "",
+    "keywords": [
+        "pytgcalls",
+        "telegram bot",
+        "video stream"
+    ],
+    "website": "",
+    "repository": "https://github.com/levina-lab/video-stream",
+    "success_url": "https://t.me/its_Prince",
+    "env": {
+        "API_ID": {
+            "description": "Your APP_ID from my.telegram.org",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "Your API_HASH from my.telegram.org",
+            "required": true
+        },
+        "BOT_TOKEN": {
+            "description": "Your bot token from @botfather",
+            "required": true
+        },
+        "BOT_USERNAME": {
+            "description": "Your bot username from @botfather",
+            "required": true
+        },
+        "ASSISTANT_NAME": {
+            "description": "Your assistant username without @",
+            "required": true
+        },
+        "SESSION_NAME": {
+            "description": "Your pyrogram session. Get it by running [https://replit.com/@PrinceYT/SessionGenerator#main.py]",
+            "required": true
+        },
+        "SUDO_USERS": {
+            "description": "List of user ids marked to be admin everywhere",
+            "required": true
+        },
+        "DURATION_LIMIT": {
+            "description": "Maximum duration limit for downloadable videos (in minutes)",
+            "required": true
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "heroku/nodejs"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "stack": "container"
+}
