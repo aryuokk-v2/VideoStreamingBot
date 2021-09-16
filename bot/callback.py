@@ -23,8 +23,7 @@ async def cbguide(_, query: CallbackQuery):
             [[
                 InlineKeyboardButton(
                     "🏡 Go Back", callback_data="cbstart")
-            ]]
-            [[
+            ],[
                 InlineKeyboardButton(
                     "Dev", url=f"https://t.me/its_Prince")
             ]]
